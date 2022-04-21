@@ -13,7 +13,7 @@ const Header = () => {
           <NavLink to='/trackrecord'>Track Record</NavLink>
           <NavLink to='/services'>Services</NavLink>
           <NavLink to='/more'>Know More</NavLink>
-          <button className={styles.btn} to='/support'>Support</button>
+          <button className={styles.btn} >Support</button>
         </div>
       </div>
     </div>

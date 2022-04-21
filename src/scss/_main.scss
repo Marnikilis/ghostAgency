@@ -26,6 +26,10 @@ body {
   max-width: 1920px;
   padding: 50px 200px;
   margin: 0 auto;
+
+  @include media-max($lg-break){
+   padding: 50px;
+  }
 }
 
 .wrapper {

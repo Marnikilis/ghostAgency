@@ -16,29 +16,30 @@ const FirstPage = () => {
         <div className={styles.caption}>
           <div className={styles.captionText}>
             <p className={'heading'}>Captain Sem</p>
-            Veteran Spooky Ghost</div>
+            Veteran Spooky Ghost
+          </div>
           <Pointer className={styles.pointer}/>
         </div>
         <div className={styles.scroll}>
           <Scroll/>
           <div>Scroll for<br/> next ghost</div>
         </div>
-       <div className={styles.mainPart}>
-         <div className={styles.description}>
-           <div className={'heading'}>#1 Top Scariest  Ghost 2020</div>
-           <div className={'title'}>RESPAWN <br/>THE SPOOKY SKULL</div>
-           <div>In search for cute little puppy, Captain Sem has come back from his tragic death.
-             With his hogwarts certified power he promise to be a hero for all of ghostkind.
-           </div>
-           <div className={styles.buttons}>
-             <Button>Book Now</Button>
-             <button>His Track Record
-             <Arrow className={styles.arrow}/>
-             </button>
-           </div>
-         </div>
-         <Button className={'generalBtn'}>See All Ghost</Button>
-       </div>
+        <div className={styles.mainPart}>
+          <div className={styles.description}>
+            <div className={'heading'}>#1 Top Scariest Ghost 2020</div>
+            <div className={'title'}>RESPAWN <br/>THE SPOOKY SKULL</div>
+            <div>In search for cute little puppy, Captain Sem has come back from his tragic death.
+              With his hogwarts certified power he promise to be a hero for all of ghostkind.
+            </div>
+            <div className={styles.buttons}>
+              <Button>Book Now</Button>
+              <button>His Track Record
+                <Arrow className={styles.arrow}/>
+              </button>
+            </div>
+          </div>
+          <Button className={'generalBtn'}>See All Ghost</Button>
+        </div>
       </div>
     </div>
   );

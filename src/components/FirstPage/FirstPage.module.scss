@@ -1,60 +1,86 @@
 @import "../../scss/settings";
 @import "../../scss/mixins";
 
-.container{
+.container {
   background-color: #303056;
   position: relative;
+  //height: 100vh;
   overflow: hidden;
 }
 
-.spooky{
+.spooky {
   position: absolute;
   top: 0;
   left: 0;
 
-  @include media-max($lg-break){
-  width: 80%;
+  @include media-max($lg-break) {
+    width: 80%;
   }
 }
 
-.mainPart{
-  margin: 120px 20px;
+.mainPart {
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
 }
 
-.description{
+.description {
   margin-left: auto;
   display: flex;
   flex-direction: column;
   width: 40%;
-}
-.caption{
-  display: flex;
-  position: absolute;
-  top: 60%;
-  left: 10%;
-}
-.captionText{
- align-self: flex-end;
+
+  @include media-max($lg-break) {
+    margin-left: 0;
+    margin-top: 500px;
+    width: 100%;
+  }
 }
 
-.pointer{
+.caption {
+  display: flex;
+  position: absolute;
+  top: 65%;
+  left: 10%;
+
+  @include media-max($lg-break) {
+    top: 30%;
+    left: 60%;
+  }
+}
+
+.captionText {
+  align-self: flex-end;
+}
+
+.pointer {
   margin-left: 25px;
 }
-.buttons{
+
+.buttons {
   margin: 50px 0 150px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include media-max($lg-break) {
+    justify-content: space-around;
+    margin: 50px;
+  }
 }
 
-.scroll{
+.scroll {
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 90%;
   text-align: center;
+
+  @include media-max($lg-break) {
+    top: 90%;
+    left: 85%;
+  }
 }
-.arrow{
+
+.arrow {
   margin-left: 10px;
 }
