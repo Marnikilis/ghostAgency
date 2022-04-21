@@ -1,0 +1,60 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
+.container{
+  background-color: #303056;
+  position: relative;
+  overflow: hidden;
+}
+
+.spooky{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include media-max($lg-break){
+  width: 80%;
+  }
+}
+
+.mainPart{
+  margin: 120px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.description{
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.caption{
+  display: flex;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+}
+.captionText{
+ align-self: flex-end;
+}
+
+.pointer{
+  margin-left: 25px;
+}
+.buttons{
+  margin: 50px 0 150px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scroll{
+  position: absolute;
+  top: 70%;
+  left: 90%;
+  text-align: center;
+}
+.arrow{
+  margin-left: 10px;
+}

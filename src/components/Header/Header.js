@@ -6,14 +6,14 @@ import {NavLink} from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <div className={`mainContainer ${styles.container}`}>
-        <Logo/>
+      <div className={styles.container}>
+        <NavLink to='/'><Logo/></NavLink>
         <div className={styles.nav}>
           <NavLink to='/graveyard'>Graveyard</NavLink>
           <NavLink to='/trackrecord'>Track Record</NavLink>
           <NavLink to='/services'>Services</NavLink>
           <NavLink to='/more'>Know More</NavLink>
-          <NavLink to='/support'>Support</NavLink>
+          <button className={styles.btn} to='/support'>Support</button>
         </div>
       </div>
     </div>

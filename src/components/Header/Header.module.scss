@@ -1,5 +1,13 @@
 .container{
   display: flex;
   justify-content: space-between;
-  background-color: blueviolet;
+}
+
+.btn{
+  font-size: 14px;
+  font-weight: 600;
+  color: #FF5B79;
+  border-radius: 15px;
+  padding: 10px;
+  border: 2px solid #FF5B79;
 }
