@@ -1,0 +1,62 @@
+@import "./utils/variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: $main-font;
+  background-color: #ffffff;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContainer {
+  max-width: 1920px;
+  padding: 50px 70px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+
+.heading{
+
+}
+
+.title{
+
+}
+a{
+  display: inline-block;
+  font-family: $nav-font;
+  font-weight: 500;
+  font-size: 14px;
+  color:  #FF5B79;
+  text-decoration: none;
+  margin-left: 54px;
+  transition-duration: 0.4s;
+
+  &:nth-child(1){
+    margin-left: 15px;
+  }
+}
+
+a.active{
+  //color: #009aeb;
+}
+
+
+
