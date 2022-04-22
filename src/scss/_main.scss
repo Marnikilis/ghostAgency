@@ -1,4 +1,5 @@
 @import '../scss/mixins';
+
 *,
 *::before,
 *::after {
@@ -23,8 +24,8 @@ body {
 }
 
 .mainContainer {
-  max-width: 1920px;
-  padding: 50px 200px;
+  max-width: 1520px;
+  padding: 50px 150px;
   margin: 0 auto;
 
   @include media-max($lg-break){
@@ -53,6 +54,11 @@ button{
   font-weight: 900;
   font-size: 68px;
   color: #FFFFFF;
+
+
+  @include media-max($lg-break){
+    font-size: 50px;
+  }
 }
 
 
@@ -61,14 +67,7 @@ a {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
-  color: #FF5B79;
   text-decoration: none;
   margin-right: 54px;
   transition-duration: 0.4s;
 }
-
-
-.generalBtn{
-
-}
-

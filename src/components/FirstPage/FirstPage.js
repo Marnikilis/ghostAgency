@@ -6,13 +6,15 @@ import {ReactComponent as Pointer} from '../../images/pointer.svg';
 import {ReactComponent as Scroll} from '../../images/scroll.svg';
 import {ReactComponent as Arrow} from '../../images/arrow.svg';
 import Button from "../../UI/Button/Button";
+import ScrollBar from "../ScrollBar/ScrollBar";
 
 const FirstPage = () => {
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='first'>
       <div className={'mainContainer'}>
-        <Header/>
         <Spooky className={styles.spooky}/>
+        <Header />
         <div className={styles.caption}>
           <div className={styles.captionText}>
             <p className={'heading'}>Captain Sem</p>
@@ -21,7 +23,9 @@ const FirstPage = () => {
           <Pointer className={styles.pointer}/>
         </div>
         <div className={styles.scroll}>
-          <Scroll/>
+          <a href={'#second'} style={{marginRight:"0"}}>
+            <Scroll/>
+          </a>
           <div>Scroll for<br/> next ghost</div>
         </div>
         <div className={styles.mainPart}>
@@ -41,6 +45,7 @@ const FirstPage = () => {
           <Button className={'generalBtn'}>See All Ghost</Button>
         </div>
       </div>
+      <ScrollBar/>
     </div>
   );
 };
