@@ -43,7 +43,7 @@ const ThirdPage = () => {
             </div>
           </div>
           <div className={'scroll'}>
-            <a href={'#second'} style={{marginRight: "0"}}>
+            <a href={'#first'} style={{marginRight: "0"}}>
               <Scroll color={color}/>
             </a>
             <div>Scroll for<br/> next ghost</div>
