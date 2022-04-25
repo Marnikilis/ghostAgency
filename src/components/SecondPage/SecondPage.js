@@ -27,6 +27,12 @@ const SecondPage = () => {
           </div>
           <Pointer color={color}/>
         </div>
+        <div className={'scroll'}>
+          <a href={'#second'} style={{marginRight: "0"}}>
+            <Scroll/>
+          </a>
+          <div>Scroll for<br/> next ghost</div>
+        </div>
         <div style={{color: pageColor}} className={'mainPart'}>
           <div className={styles.description}>
             <div className={'heading'}>#2 top Best duo</div>
@@ -40,12 +46,6 @@ const SecondPage = () => {
                 <Arrow color={pageColor}/>
               </a>
             </div>
-          </div>
-          <div className={'scroll'}>
-            <a href={'#second'} style={{marginRight: "0"}}>
-              <Scroll/>
-            </a>
-            <div>Scroll for<br/> next ghost</div>
           </div>
           <StrokeButton color={color}>See All Ghost</StrokeButton>
         </div>
