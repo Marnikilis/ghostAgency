@@ -12,6 +12,10 @@
     top: 60%;
     right: 0;
   }
+  @include media-max($xs-break) {
+    top: 60%;
+    right: -5%;
+  }
 }
 
 

@@ -2,11 +2,13 @@ import React from 'react';
 import styles from './FirstPage.module.scss';
 import Header from "../Header/Header";
 import {ReactComponent as Spooky} from '../../images/spooky.svg';
-import {ReactComponent as Pointer} from '../../images/pointer.svg';
-import {ReactComponent as Scroll} from '../../images/scroll.svg';
-import {ReactComponent as Arrow} from '../../images/arrow.svg';
+import Pointer from '../../UI/Pointer/Pointer';
+import Arrow from "../../UI/Arrow";
 import Button from "../../UI/Button/Button";
+import Scroll from "../../UI/Scroll/Scroll";
 import ScrollBar from "../ScrollBar/ScrollBar";
+import StrokeButton from "../../UI/Button/StrokeButton";
+
 
 const FirstPage = () => {
 
@@ -14,35 +16,35 @@ const FirstPage = () => {
     <div className={styles.container} id='first'>
       <div className={'mainContainer'}>
         <Spooky className={styles.spooky}/>
-        <Header />
+        <Header/>
         <div className={styles.caption}>
-          <div className={styles.captionText}>
-            <p className={'heading'}>Captain Sem</p>
+          <div className={'captionText'}>
+            <p className={'caption'}>Captain Sem</p>
             Veteran Spooky Ghost
           </div>
-          <Pointer className={styles.pointer}/>
+          <Pointer/>
         </div>
-        <div className={styles.scroll}>
-          <a href={'#second'} style={{marginRight:"0"}}>
-            <Scroll/>
-          </a>
-          <div>Scroll for<br/> next ghost</div>
-        </div>
-        <div className={styles.mainPart}>
-          <div className={styles.description}>
+        <div className={'mainPart'}>
+          <div className={'description'}>
             <div className={'heading'}>#1 Top Scariest Ghost 2020</div>
             <div className={'title'}>RESPAWN <br/>THE SPOOKY SKULL</div>
             <div>In search for cute little puppy, Captain Sem has come back from his tragic death.
               With his hogwarts certified power he promise to be a hero for all of ghostkind.
             </div>
-            <div className={styles.buttons}>
+            <div className={'buttons'}>
               <Button>Book Now</Button>
-              <button>His Track Record
-                <Arrow className={styles.arrow}/>
-              </button>
+              <a className={'link'}>His Track Record
+                <Arrow/>
+              </a>
             </div>
           </div>
-          <Button className={'generalBtn'}>See All Ghost</Button>
+          <div className={'scroll'}>
+            <a href={'#second'} style={{marginRight: "0"}}>
+              <Scroll/>
+            </a>
+            <div>Scroll for<br/> next ghost</div>
+          </div>
+          <StrokeButton>See All Ghost</StrokeButton>
         </div>
       </div>
       <ScrollBar/>

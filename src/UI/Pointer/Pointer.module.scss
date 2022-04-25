@@ -1,0 +1,16 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
+.pointer {
+  margin-left: 25px;
+
+  @include media-max($lg-break) {
+    margin-top: -20px ;
+    transform: rotate(-90deg);
+  }
+
+  @include media-max($xs-break) {
+    margin-left: 10px;
+    transform: rotate(0);
+  }
+}

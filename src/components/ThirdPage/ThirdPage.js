@@ -1,50 +1,54 @@
 import React from 'react';
 import Header from "../Header/Header";
-import {ReactComponent as Pointer} from "../../images/pointer.svg";
-import {ReactComponent as Scroll} from "../../images/scroll.svg";
+import Pointer from '../../UI/Pointer/Pointer';
 import {ReactComponent as Pumpkin} from "../../images/pumpkin.svg";
 import Button from "../../UI/Button/Button";
-import {ReactComponent as Arrow} from "../../images/arrow.svg";
+import Arrow from "../../UI/Arrow";
 import ScrollBar from "../ScrollBar/ScrollBar";
 import styles from './ThirdPage.module.scss';
+import Scroll from "../../UI/Scroll/Scroll";
+import StrokeButton from "../../UI/Button/StrokeButton";
 
 
-
-const color= "#F8F8FD";
+const pageColor = "#F8F8FD";
+const color = "#A7DE93";
 
 const ThirdPage = () => {
 
   return (
     <div className={styles.container} id='third'>
       <div className={'mainContainer'}>
-        <Header color={color}/>
+        <Header color={pageColor}/>
         <Pumpkin className={styles.pumpkin}/>
         <div className={styles.caption}>
-          <div className={styles.captionText}>
-            <p className={'heading'}>The Labu “Reiza”</p>
+          <div className={'captionText'}>
+            <p className={'caption'}>The Labu “Reiza”</p>
             The Living Pumpkin
           </div>
-          <Pointer className={styles.pointer}/>
+          <Pointer color={color}/>
         </div>
-        {/*<div className={styles.scroll}>*/}
-        {/*  <Scroll/>*/}
-        {/*  <div>Scroll for<br/> next ghost</div>*/}
-        {/*</div>*/}
-        <div className={styles.mainPart}>
-          <div className={styles.description}>
+        <div style={{pageColor}} className={'mainPart'}>
+          <div className={'description'}>
             <div className={'heading'}>#3 Top Scariest Ghost 2020</div>
             <div className={'title'}>UOOOO TRICK OR TREAT!!</div>
             <div>Hi I’m Reiza, people call me “The Labu” currently I’m trying to learn something new,
               building my own bike with parts only made from Malaysia.
             </div>
-            <div className={styles.buttons}>
-              <Button>Book Now</Button>
-              <button>His Track Record
-                <Arrow className={styles.arrow}/>
-              </button>
+            <div className={'buttons'}>
+              <Button color={color} textColor={"#303056"}>Book Now</Button>
+              <a className={'link'}>
+                His Track Record
+                <Arrow color={pageColor}/>
+              </a>
             </div>
           </div>
-          <Button>See All Ghost</Button>
+          <div className={'scroll'}>
+            <a href={'#second'} style={{marginRight: "0"}}>
+              <Scroll color={color}/>
+            </a>
+            <div>Scroll for<br/> next ghost</div>
+          </div>
+          <StrokeButton color={color}>See All Ghost</StrokeButton>
         </div>
       </div>
       <ScrollBar/>

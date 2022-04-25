@@ -5,7 +5,6 @@
   background-image: linear-gradient(136.16deg, rgba(91, 135, 75, 0.97) 12.91%, rgba(12, 55, 32, 0.87) 87.68%);
   position: relative;
   overflow: hidden;
-
 }
 
 .pumpkin {
@@ -13,34 +12,16 @@
   top: 0;
   left: 0;
 
-  @include media-max($lg-break) {
-    width: 80%;
-  }
-}
-
-.mainPart {
-  margin-top: 120px;
-  display: flex;
-  flex-direction: column;
-}
-
-.description {
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-
-  @include media-max($lg-break) {
-    margin-left: 0;
-    margin-top: 500px;
-    width: 100%;
-  }
+    @include media-max($lg-break) {
+      width: 80%;
+      height: 700px;
+    }
 }
 
 .caption{
   display: flex;
   position: absolute;
-  top: 65%;
+  top: 70%;
   left: 10%;
 
   @include media-max($lg-break) {
@@ -51,56 +32,13 @@
 
   @include media-max($xs-break) {
     flex-direction: row;
-    top: 45%;
+    top: 40%;
     left: 20%;
   }
-}
-
-.captionText {
-  align-self: flex-end;
-}
-
-.pointer {
-  margin-left: 25px;
-
-  @include media-max($lg-break) {
-    margin-top: -20px ;
-    transform: rotate(-90deg);
-  }
-
-  @include media-max($xs-break) {
-    transform: rotate(0);
+  @include media-max($l-break) {
+    flex-direction: row;
+    top: 35%;
   }
 }
 
 
-.buttons {
-  margin: 50px 0 150px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @include media-max($lg-break) {
-    justify-content: space-around;
-    margin: 50px;
-  }
-  @include media-max($xs-break) {
-    flex-direction: column;
-  }
-}
-
-.scroll {
-  position: absolute;
-  top: 80%;
-  left: 90%;
-  text-align: center;
-
-  @include media-max($lg-break) {
-    top: 90%;
-    left: 85%;
-  }
-}
-
-.arrow {
-  margin-left: 10px;
-}
