@@ -27,7 +27,7 @@ const FirstPage = () => {
         <div className={'mainPart'}>
           <div className={'description'}>
             <div className={'heading'}>#1 Top Scariest Ghost 2020</div>
-            <div className={'title'}>RESPAWN <br/>THE SPOOKY SKULL</div>
+            <div className={'title'}>RESPAWN THE SPOOKY SKULL</div>
             <div>In search for cute little puppy, Captain Sem has come back from his tragic death.
               With his hogwarts certified power he promise to be a hero for all of ghostkind.
             </div>

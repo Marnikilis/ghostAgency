@@ -34,7 +34,7 @@ const SecondPage = () => {
           <div>Scroll for<br/> next ghost</div>
         </div>
         <div style={{color: pageColor}} className={'mainPart'}>
-          <div className={styles.description}>
+          <div className={`description ${styles.description}`}>
             <div className={'heading'}>#2 top Best duo</div>
             <div className={'title'}>BRING BACK MY COTTON CANDYL</div>
             <div>Adino steals his brother cotton candy and eats them all in one bite,
