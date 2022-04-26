@@ -16,7 +16,7 @@ const FirstPage = () => {
     <div className={styles.container} id='first'>
       <div className={'mainContainer'}>
         <Spooky className={styles.spooky}/>
-        <Header/>
+        <Header color={'#FF5B79'}/>
         <div className={styles.caption}>
           <div className={'captionText'}>
             <p className={'caption'}>Captain Sem</p>
@@ -26,7 +26,7 @@ const FirstPage = () => {
         </div>
         <div className={'mainPart'}>
           <div className={'description'}>
-            <div className={'heading'}>#1 Top Scariest Ghost 2020</div>
+            <div style={{color: '#FF5B79'}} className={'heading'}>#1 Top Scariest Ghost 2020</div>
             <div className={'title'}>RESPAWN THE SPOOKY SKULL</div>
             <div>In search for cute little puppy, Captain Sem has come back from his tragic death.
               With his hogwarts certified power he promise to be a hero for all of ghostkind.

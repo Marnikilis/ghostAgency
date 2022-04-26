@@ -18,8 +18,8 @@ const SecondPage = () => {
   return (
     <div className={styles.container} id='second'>
       <div className={'mainContainer'}>
-        <Header color={pageColor}/>
         <Adino className={styles.adino}/>
+        <Header color={pageColor} logoColor={pageColor}/>
         <div className={styles.caption}>
           <div className={'captionText'}>
             <p className={'caption'}>Adino & Grahami</p>

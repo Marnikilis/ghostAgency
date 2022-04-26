@@ -14,8 +14,11 @@
    right: 5%;
 
   @include media-max($lg-break) {
-    top: 5%;
+    top: 8%;
     width: 80%;
+  }
+  @include media-max($sm-break) {
+    top: 5%;
   }
   @include media-max($xs-break) {
     height: 400px;

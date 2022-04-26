@@ -18,8 +18,8 @@ const ThirdPage = () => {
   return (
     <div className={styles.container} id='third'>
       <div className={'mainContainer'}>
-        <Header color={pageColor}/>
         <Pumpkin className={styles.pumpkin}/>
+        <Header color={pageColor} logoColor={pageColor}/>
         <div className={styles.caption}>
           <div className={'captionText'}>
             <p className={'caption'}>The Labu “Reiza”</p>
