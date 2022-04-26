@@ -29,19 +29,23 @@
     position: absolute;
     top:-60px;
     right: -60px;
-    height: 500px;
-    padding: 20px 50px;
+    height: 100vh;
+    padding: 20px 40px;
     background-color: #303056;
     width: 200px;
     z-index: 4000;
     transform: translateX(100%);
-    border-radius: 20px;
     transition: all 0.5s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 
     & > * {
-      margin-top: 50px;
-      padding: 15px;
+      display: flex;
+      margin: 20px 0;
+      padding: 12px;
+
+      &:nth-child(1){
+        margin-top: 60px;
+      }
     }
   }
 
