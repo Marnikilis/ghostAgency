@@ -12,20 +12,23 @@ const Header = ({color= "white"}) => {
   }
 
   return (
-    <div>
+    <header>
       <div className={styles.container}>
         <NavLink to='/'>
           <Logo color={color}/>
         </NavLink>
-        <div>
+        <div className={styles.nav}>
           <NavLink style={{color}} to='/graveyard'>Graveyard</NavLink>
           <NavLink style={{color}} to='/trackrecord'>Track Record</NavLink>
           <NavLink style={{color}} to='/services'>Services</NavLink>
           <NavLink style={{color}} to='/more'>Know More</NavLink>
           <button style={btnStyles} className={styles.btn} >Support</button>
         </div>
+        <div style={{color}} className={styles.menu}>
+        <div className={styles.menuBtn}/>
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 

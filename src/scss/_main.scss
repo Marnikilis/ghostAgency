@@ -135,5 +135,10 @@ button {
     top: 85%;
     left: 85%;
   }
+
+  @include media-max($xs-break) {
+    left: 80%;
+    font-size: 10px;
+  }
 }
 

@@ -16,6 +16,11 @@
       width: 80%;
       height: 700px;
     }
+  @include media-max($xs-break) {
+    width: 110%;
+    height: 500px;
+  }
+
 }
 
 .caption{
@@ -38,6 +43,9 @@
   @include media-max($l-break) {
     flex-direction: row;
     top: 35%;
+  }
+  @include media-max($xs-break) {
+    top: 30%;
   }
 }
 

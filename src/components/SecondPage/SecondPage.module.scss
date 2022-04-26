@@ -17,6 +17,9 @@
     top: 5%;
     width: 80%;
   }
+  @include media-max($xs-break) {
+    height: 400px;
+  }
 }
 .info{
   display: flex;
@@ -48,6 +51,9 @@
   @include media-max($l-break) {
     top: 35%;
     left: 20%;
+  }
+  @include media-max($xs-break) {
+    top: 30%;
   }
 }
 

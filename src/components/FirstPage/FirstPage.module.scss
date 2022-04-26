@@ -5,7 +5,6 @@
   background-color: #303056;
   position: relative;
   overflow: hidden;
-
 }
 
 .spooky {
@@ -16,6 +15,10 @@
   @include media-max($lg-break) {
     width: 80%;
     height: 700px;
+  }
+  @include media-max($xs-break) {
+    width: 110%;
+    height: 500px;
   }
 }
 
@@ -40,6 +43,10 @@
 
   @include media-max($l-break) {
     top: 30%;
+  }
+
+  @include media-max($xxs-break) {
+     top: 27%;
   }
 }
 
