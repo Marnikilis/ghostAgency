@@ -37,14 +37,10 @@
 
   @include media-max($xs-break) {
     flex-direction: row;
-    top: 40%;
+    top: 35%;
     left: 20%;
   }
   @include media-max($l-break) {
-    flex-direction: row;
-    top: 35%;
-  }
-  @include media-max($xs-break) {
     top: 30%;
   }
 }
