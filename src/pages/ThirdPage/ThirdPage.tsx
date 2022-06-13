@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import ScrollBar from "../../components/ScrollBar/ScrollBar";
 //@ts-ignore
 import styles from "./ThirdPage.module.scss";
 import Description from "../../components/Description /Description";

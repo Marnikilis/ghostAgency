@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../../components/Header/Header";
 //@ts-ignore
 import styles from "./SecondPage.module.scss";
-import ScrollBar from "../../components/ScrollBar/ScrollBar";
 import Description from "../../components/Description /Description";
 import BottomButtons from "../../components/BottomButtons/BottomButtons";
 import Caption from "../../components/Caption/Caption";
