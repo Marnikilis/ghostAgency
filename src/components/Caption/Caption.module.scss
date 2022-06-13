@@ -1,0 +1,41 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
+.caption {
+  display: flex;
+  height: 100%;
+  margin-left: 100px;
+  color: #fff;
+
+  @include media-max($md-break) {
+    justify-content: flex-end;
+  }
+  @include media-max($xs-break) {
+    justify-content: center;
+  }
+  @include media-max($l-break) {
+    margin-left: -50px;
+  }
+}
+.ghostName {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.captionText {
+  align-self: flex-end;
+}
+
+.captionContent {
+  display: flex;
+  align-self: flex-end;
+
+  @include media-max($md-break) {
+    align-self: center;
+    flex-direction: column;
+  }
+  @include media-max($xs-break) {
+    align-self: flex-end;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
+.background {
+  background-image: linear-gradient(136.16deg, rgba(91, 135, 75, 0.97) 12.91%, rgba(12, 55, 32, 0.87) 87.68%);
+  height: 100vh;
+
+  @include media-max($md-break) {
+    height: 100%;
+  }
+}
+
+
+.imgContainer {
+  margin-top: -118px;
+  width: 90%;
+  //height: 500px;
+  background: url("../../images/pumpkin.svg") no-repeat;
+  background-size: contain;
+
+  @include media-max($md-break) {
+    align-self: center;
+    height: 700px;
+  }
+  @include media-max($xs-break) {
+    width: 500px;
+    height: 500px;
+  }
+  @include media-max($l-break) {
+    width: 380px;
+    height: 450px;
+  }
+}
+

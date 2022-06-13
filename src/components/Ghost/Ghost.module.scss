@@ -1,0 +1,20 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
+.flexContainer {
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
+  padding-right: 40px;
+
+  @include media-max($md-break) {
+    flex-direction: column;
+  }
+}
+
+.reverse {
+  @include media-max($md-break) {
+    flex-direction: column-reverse;
+  }
+}
+

@@ -3,23 +3,27 @@
 
 .container{
   position: absolute;
-  top: 40%;
-  right: 5%;
+  width: 4px;
+  top: 35%;
+  right: 0;
   display: flex;
   flex-direction: column;
+  //padding-left: 60px;
 
-  @include media-max($lg-break) {
+  @include media-max($md-break) {
     top: 60%;
-    right: 0;
+    //right: 0;
+  }
+  @include media-max($sm-break) {
+    //right: -30px;
   }
   @include media-max($xs-break) {
-    top: 60%;
-    right: -5%;
+    top: 50%;
+    right: 5%;
   }
 }
 
-
-a.scrollBtn:link{
+.link{
   height: 10px;
   width: 4px;
   border-radius: 10px;
@@ -27,9 +31,3 @@ a.scrollBtn:link{
   background-color: #F8D3EB;
 }
 
-
-a.scrollBtn:active,
-a.scrollBtn:focus,
-a.scrollBtn:first-of-type, {
-  height: 20px;
-}

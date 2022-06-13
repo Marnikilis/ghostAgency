@@ -3,17 +3,12 @@
 
 
 .container{
+  height: 118px;
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-
-  @include media-max($md-break){
-   flex-direction: column;
-    align-items: center;
-  }
-  @include media-max($xs-break){
-   flex-direction: row;
-  }
+  z-index: 1000;
 }
 
 .btn{
@@ -25,16 +20,15 @@
 
 .nav{
 
-  @include media-max($xs-break){
+  @include media-max($sm-break){
     position: absolute;
-    top:-60px;
+    top:0;
     right: -60px;
     height: 100vh;
     padding: 20px 40px;
-    background-color: #303056;
     width: 200px;
     z-index: 4000;
-    transform: translateX(100%);
+    transform: translateX(0);
     transition: all 0.5s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 
@@ -47,79 +41,10 @@
         margin-top: 60px;
       }
     }
-  }
-
-}
-.menu{
-
-  @include media-max($xs-break){
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 20px;
-    width: 20px;
-  }
-}
-
-.checkbox{
-  display: none;
-
-  @include media-max($xs-break){
-    position: absolute;
-    top: -40%;
-    height:100%;
-    width: 100%;
-    margin: 0;
-    z-index: 6000;
-    opacity: 0;
-    display: block;
-  }
-}
-.menuBtn{
-  display: none;
-  position: absolute;
-  height: 1.5px;
-  background-color:currentColor;
-  width: 20px;
-  transition: all 0.5s;
-
-
-  &:after,
-  &:before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: currentColor;
-  }
-
-  &:after{
-    transform: translateY(-5px);
-  }
-  &:before{
-    transform: translateY(5px);
-  }
-
-  @include media-max($xs-break){
-    display: block;
-    z-index: 5000;
+    &.close {
+      transform: translateX(100%);
+    }
   }
 }
 
 
-header input[type="checkbox"]:checked  ~ .nav{
-  @include media-max($xs-break){
-    background-color: #F5CAEB;
-    transform: translateX(0);
-  }
-}
-
-header input[type="checkbox"]:checked ~ .menuBtn:before {
-  transform: rotate(90deg);
-}
-header input[type="checkbox"]:checked ~ .menuBtn {
-  transform: rotate(45deg);
-}
-header input[type="checkbox"]:checked ~ .menuBtn:after{
-  display: none;
-}

@@ -1,0 +1,42 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
+.background{
+  background-image: linear-gradient(130deg, #E8CAFB 0.66%, #8A87C1 83.32%);
+  height: 100vh;
+
+  @include media-max($md-break) {
+    height: 100%;
+  }
+}
+
+.imgContainer {
+  width: 90%;
+  height: 500px;
+  background: url("../../images/adino.svg") 40px no-repeat;
+  background-size: contain;
+
+  @include media-max($md-break) {
+    background-position: center right;
+    height: 450px;
+  }
+  @include media-max($xs-break) {
+    width: 500px;
+    height: 400px;
+  }
+  @include media-max($l-break) {
+    width: 120%;
+    height: 300px;
+  }
+}
+
+.reverse {
+  display: flex;
+  @include media-max($md-break) {
+    flex-direction: column-reverse;
+  }
+}
+
+
+
+
