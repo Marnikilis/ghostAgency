@@ -17,12 +17,34 @@
   }
 }
 
-.link{
-  height: 10px;
+
+.link,
+.link:link,
+.link:visited {
+  position: relative;
   padding: 5px;
-  width: 4px;
-  border-radius: 10px;
-  margin-bottom: 28px;
-  background-color: #F8D3EB;
+  margin-bottom: 18px;
+
+  &:before{
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4px;
+    width: 4px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #F8D3EB;
+    transition: all 0.5s;
+  }
+  &:global {
+    &.active {
+      &:before{
+        height: 20px;
+      }
+    }
+  }
 }
+
+
 

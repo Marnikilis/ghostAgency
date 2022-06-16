@@ -46,6 +46,7 @@ const ThirdPage = () => {
           scrollColor={color}
           textColor={pageColor}
           strokeColor={pageColor}
+          link={"/"}
         />
       </div>
     </div>

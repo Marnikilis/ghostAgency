@@ -10,17 +10,17 @@ const ScrollBar = () => {
   return (
     <div className={styles.container}>
       <NavLink
-        className={"firstLink"}
+        className={styles.link}
         to="/"
         onClick={() => onScrollHandler("first")}
       />
       <NavLink
-        className={"secondLink"}
+        className={styles.link}
         to="/trackrecord"
         onClick={() => onScrollHandler("second")}
       />
       <NavLink
-        className={"thirdLink"}
+        className={styles.link}
         to="/support"
         onClick={() => onScrollHandler("third")}
       />

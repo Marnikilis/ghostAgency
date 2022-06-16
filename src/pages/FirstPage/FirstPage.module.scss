@@ -24,6 +24,9 @@
     width: 400px;
     height: 350px;
   }
+  @include media-max($xxs-break) {
+    width: 300px;
+  }
 }
 
 

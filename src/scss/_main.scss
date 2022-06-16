@@ -59,36 +59,36 @@ button {
   scroll-snap-align: start;
   scroll-behavior: smooth;
 }
-#first:target .firstLink:before,
-#first:hover .firstLink:before,
-#second:target .secondLink:before,
-#second:hover .secondLink:before,
-#third:target .thirdLink:before,
-#third:hover .thirdLink:before {
-  height: 20px;
-}
-
-
-.firstLink,
-.secondLink,
-.thirdLink{
-  position: relative;
-  padding: 5px;
-  margin-bottom: 18px;
-
-  &:before{
-    content: '';
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 4px;
-    width: 4px;
-    border-radius: 10px;
-    position: absolute;
-    background-color: #F8D3EB;
-    transition: all 0.5s;
-  }
-}
+//#first:target .firstLink:before,
+//#first:hover .firstLink:before,
+//#second:target .secondLink:before,
+//#second:hover .secondLink:before,
+//#third:target .thirdLink:before,
+//#third:hover .thirdLink:before {
+//  height: 20px;
+//}
+//
+//
+//.firstLink,
+//.secondLink,
+//.thirdLink{
+//  position: relative;
+//  padding: 5px;
+//  margin-bottom: 18px;
+//
+//  &:before{
+//    content: '';
+//    top: 50%;
+//    left: 50%;
+//    transform: translate(-50%, -50%);
+//    height: 4px;
+//    width: 4px;
+//    border-radius: 10px;
+//    position: absolute;
+//    background-color: #F8D3EB;
+//    transition: all 0.5s;
+//  }
+//}
 
 .ml{
   margin-left: 50px;
