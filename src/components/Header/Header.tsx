@@ -19,7 +19,7 @@ const Header = ({
   };
 
   useEffect(() => {
-    if (pathname === "/graveyard" || pathname === "/") {
+    if (pathname === "/") {
       onScrollHandler("first");
     } else if (pathname === "/trackrecord") {
       onScrollHandler("second");
@@ -58,7 +58,7 @@ const Header = ({
         >
           <NavLink
             style={{ color }}
-            to="/graveyard"
+            to="/"
             onClick={() => onScrollHandler("first")}
           >
             Graveyard

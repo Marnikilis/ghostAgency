@@ -1,6 +1,7 @@
 import React from "react";
 //@ts-ignore
 import styles from "./ScrollBar.module.scss";
+import { NavLink } from "react-router-dom";
 
 const ScrollBar = () => {
   const onScrollHandler = (id) => {
@@ -8,16 +9,19 @@ const ScrollBar = () => {
   };
   return (
     <div className={styles.container}>
-      <button
+      <NavLink
         className={"firstLink"}
+        to="/"
         onClick={() => onScrollHandler("first")}
       />
-      <button
+      <NavLink
         className={"secondLink"}
+        to="/trackrecord"
         onClick={() => onScrollHandler("second")}
       />
-      <button
+      <NavLink
         className={"thirdLink"}
+        to="/support"
         onClick={() => onScrollHandler("third")}
       />
     </div>
