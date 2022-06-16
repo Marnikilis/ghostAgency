@@ -3,17 +3,12 @@
 
 .background{
   background-image: linear-gradient(130deg, #E8CAFB 0.66%, #8A87C1 83.32%);
-  height: 100vh;
-
-  @include media-max($md-break) {
-    height: 100%;
-  }
 }
 
 .imgContainer {
   width: 90%;
   height: 500px;
-  background: url("../../images/adino.svg") 40px no-repeat;
+  background: url("../../images/adino.svg") no-repeat center right;
   background-size: contain;
 
   @include media-max($md-break) {

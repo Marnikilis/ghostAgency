@@ -3,27 +3,26 @@
 
 .background {
   background-color: #303056;
-  height: 100vh;
-
-  @include media-max($md-break) {
-    height: 100%;
-  }
 }
 
 .imgContainer {
   margin-top: -118px;
-  width: 100%;
+  width: 90%;
   height: 600px;
   background: url("../../images/spooky.svg") 40px no-repeat;
   background-size: contain;
 
-  @include media-max($md-break) {
-    align-self: center;
-  }
   @include media-max($xs-break) {
-    //width: 90%;
-    width: 400px;
+    width: 450px;
+    height: 450px;
+  }
+  @include media-max($l-break) {
     height: 400px;
+    background-position: center left;
+  }
+  @include media-max($l-break) {
+    width: 400px;
+    height: 350px;
   }
 }
 

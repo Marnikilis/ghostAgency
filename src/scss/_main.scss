@@ -31,20 +31,17 @@ a {
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
-  margin-right: 54px;
   transition-duration: 0.4s;
-}
-
-
-.App {
-  display: flex;
-  flex-direction: column;
 }
 
 .mainContainer {
   max-width: 1520px;
   padding: 0 30px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 
@@ -61,28 +58,13 @@ button {
   overflow: hidden;
   scroll-snap-align: start;
   scroll-behavior: smooth;
-
-  @include media-max($lg-break) {
-    height: 100%;
-  }
 }
-
-#first:target a.firstLink{
-  height: 20px;
-}
-#first:hover a.firstLink{
-  height: 20px;
-}
-#second:target a.secondLink{
-  height: 20px;
-}
-#second:hover a.secondLink{
-  height: 20px;
-}
-#third:target a.thirdLink{
-  height: 20px;
-}
-#third:hover a.thirdLink{
+#first:target .firstLink:before,
+#first:hover .firstLink:before,
+#second:target .secondLink:before,
+#second:hover .secondLink:before,
+#third:target .thirdLink:before,
+#third:hover .thirdLink:before {
   height: 20px;
 }
 
@@ -90,11 +72,22 @@ button {
 .firstLink,
 .secondLink,
 .thirdLink{
-  height: 4px;
-  width: 4px;
-  border-radius: 10px;
-  margin-bottom: 28px;
-  background-color: #F8D3EB;
+  position: relative;
+  padding: 5px;
+  margin-bottom: 18px;
+
+  &:before{
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4px;
+    width: 4px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #F8D3EB;
+    transition: all 0.5s;
+  }
 }
 
 .ml{

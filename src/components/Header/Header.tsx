@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 //@ts-ignore
 import styles from "./Header.module.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Logo from "../../UI/Logo";
 import MenuToggle from "./MenuToggle/MenuToggle";
 import Backdrop from "./Backdrop/Backdrop";
@@ -12,6 +12,21 @@ const Header = ({
   backgroundColor = "#303056",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  const onScrollHandler = (id) => {
+    document.getElementById(`${id}`).scrollIntoView();
+  };
+
+  useEffect(() => {
+    if (pathname === "/graveyard" || pathname === "/") {
+      onScrollHandler("first");
+    } else if (pathname === "/trackrecord") {
+      onScrollHandler("second");
+    } else if (pathname === "/support") {
+      onScrollHandler("third");
+    }
+  }, []);
 
   const toggleMenuHandler = () => {
     setIsOpen((prevState) => !prevState);
@@ -34,28 +49,35 @@ const Header = ({
   return (
     <header>
       <div className={styles.container}>
-        <NavLink to="/">
+        <NavLink to="/" onClick={() => onScrollHandler("first")}>
           <Logo color={logoColor} />
         </NavLink>
         <div
           className={cls.join(" ")}
           style={{ background: isOpen ? backgroundColor : "none" }}
         >
-          <NavLink style={{ color }} to="/graveyard">
+          <NavLink
+            style={{ color }}
+            to="/graveyard"
+            onClick={() => onScrollHandler("first")}
+          >
             Graveyard
           </NavLink>
-          <NavLink style={{ color }} to="/trackrecord">
+          <NavLink
+            style={{ color }}
+            to="/trackrecord"
+            onClick={() => onScrollHandler("second")}
+          >
             Track Record
           </NavLink>
-          <NavLink style={{ color }} to="/services">
-            Services
-          </NavLink>
-          <NavLink style={{ color }} to="/more">
-            Know More
-          </NavLink>
-          <button style={btnStyles} className={styles.btn}>
+          <NavLink
+            style={btnStyles}
+            to="/support"
+            className={styles.btn}
+            onClick={() => onScrollHandler("third")}
+          >
             Support
-          </button>
+          </NavLink>
         </div>
         <MenuToggle
           onToggle={toggleMenuHandler}

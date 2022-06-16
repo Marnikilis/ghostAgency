@@ -4,11 +4,13 @@
 .flexContainer {
   display: flex;
   position: relative;
-  margin-bottom: 50px;
   padding-right: 40px;
 
   @include media-max($md-break) {
     flex-direction: column;
+  }
+  @include media-max($xs-break) {
+    margin-bottom: 50px;
   }
 }
 

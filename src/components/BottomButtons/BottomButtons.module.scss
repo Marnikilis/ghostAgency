@@ -12,6 +12,9 @@
     font-size: 13px;
     color: #F8D3EB;
   }
+  @include media-max($l-break) {
+    position: unset;
+  }
 }
 
 .bottomContainer{
@@ -19,9 +22,9 @@
   display: flex;
   justify-content: center;
   position: relative;
-  padding-bottom: 50px;
+  padding: 20px 0;
 
   @include media-max($l-break) {
-    justify-content: flex-start;
+    gap: 50px;
   }
 }

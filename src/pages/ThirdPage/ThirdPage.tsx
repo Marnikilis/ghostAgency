@@ -12,43 +12,41 @@ const color = "#A7DE93";
 
 const ThirdPage = () => {
   return (
-    <div className={"container"} id="third">
-      <div className={styles.background}>
-        <div className={"mainContainer"}>
-          <Header
-            color={pageColor}
-            logoColor={pageColor}
-            backgroundColor="#0C343D"
-          />
-          <Ghost color={pageColor}>
-            <div className={styles.imgContainer}>
-              <Caption
-                name={"The Labu “Reiza”"}
-                about={"The Living Pumpkin"}
-                color={color}
-              />
-            </div>
-            <Description
-              color={pageColor}
-              btnColor={color}
-              textColor={"#303056"}
-              heading={"#3 Top Scariest Ghost 2020"}
-              title={"UOOOO TRICK OR TREAT!!"}
-              text={
-                "Hi I’m Reiza, people call me “The Labu” " +
-                "currently I’m trying to learn something new, building my own " +
-                "bike with parts only madefrom Malaysia."
-              }
+    <div className={`container ${styles.background}`} id="third">
+      <div className={"mainContainer"}>
+        <Header
+          color={pageColor}
+          logoColor={pageColor}
+          backgroundColor="#0C343D"
+        />
+        <Ghost color={pageColor}>
+          <div className={styles.imgContainer}>
+            <Caption
+              name={"The Labu “Reiza”"}
+              about={"The Living Pumpkin"}
+              color={color}
             />
-          </Ghost>
-          <BottomButtons
-            ghost={"#first"}
+          </div>
+          <Description
+            color={pageColor}
             btnColor={color}
-            scrollColor={color}
-            textColor={pageColor}
-            strokeColor={pageColor}
+            textColor={"#303056"}
+            heading={"#3 Top Scariest Ghost 2020"}
+            title={"UOOOO TRICK OR TREAT!!"}
+            text={
+              "Hi I’m Reiza, people call me “The Labu” " +
+              "currently I’m trying to learn something new, building my own " +
+              "bike with parts only madefrom Malaysia."
+            }
           />
-        </div>
+        </Ghost>
+        <BottomButtons
+          ghost={"first"}
+          btnColor={color}
+          scrollColor={color}
+          textColor={pageColor}
+          strokeColor={pageColor}
+        />
       </div>
     </div>
   );

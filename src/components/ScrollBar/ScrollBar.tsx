@@ -3,11 +3,23 @@ import React from "react";
 import styles from "./ScrollBar.module.scss";
 
 const ScrollBar = () => {
+  const onScrollHandler = (id) => {
+    document.getElementById(`${id}`).scrollIntoView();
+  };
   return (
     <div className={styles.container}>
-      <a className={"firstLink"} href={"#first"} />
-      <a className={"secondLink"} href={"#second"} />
-      <a className={"thirdLink"} href={"#third"} />
+      <button
+        className={"firstLink"}
+        onClick={() => onScrollHandler("first")}
+      />
+      <button
+        className={"secondLink"}
+        onClick={() => onScrollHandler("second")}
+      />
+      <button
+        className={"thirdLink"}
+        onClick={() => onScrollHandler("third")}
+      />
     </div>
   );
 };
