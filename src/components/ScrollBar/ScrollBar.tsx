@@ -17,12 +17,12 @@ const ScrollBar = () => {
       <NavLink
         className={styles.link}
         to="/trackrecord"
-        onClick={() => onScrollHandler("second")}
+        onClick={() => onScrollHandler("trackrecord")}
       />
       <NavLink
         className={styles.link}
         to="/support"
-        onClick={() => onScrollHandler("third")}
+        onClick={() => onScrollHandler("support")}
       />
     </div>
   );

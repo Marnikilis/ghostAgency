@@ -12,7 +12,7 @@ const color = "#F8D3EB";
 
 const SecondPage = () => {
   return (
-    <div className={`container ${styles.background}`} id="second">
+    <div className={`container ${styles.background}`} id="trackrecord">
       <div className={"mainContainer"}>
         <Header
           color={pageColor}
@@ -39,7 +39,7 @@ const SecondPage = () => {
             </div>
           </div>
         </Ghost>
-        <BottomButtons ghost={"third"} link={"/support"} />
+        <BottomButtons ghost={"support"} link={"/support"} />
       </div>
     </div>
   );

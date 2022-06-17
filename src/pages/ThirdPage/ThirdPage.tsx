@@ -12,7 +12,7 @@ const color = "#A7DE93";
 
 const ThirdPage = () => {
   return (
-    <div className={`container ${styles.background}`} id="third">
+    <div className={`container ${styles.background}`} id="support">
       <div className={"mainContainer"}>
         <Header
           color={pageColor}

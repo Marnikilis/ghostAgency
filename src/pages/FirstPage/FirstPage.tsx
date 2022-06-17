@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //@ts-ignore
 import styles from "./FirstPage.module.scss";
 import Header from "../../components/Header/Header";
@@ -25,7 +25,7 @@ const FirstPage = () => {
             }
           />
         </Ghost>
-        <BottomButtons ghost={"second"} link={"/trackrecord"} />
+        <BottomButtons ghost={"trackrecord"} link={"/trackrecord"} />
       </div>
     </div>
   );

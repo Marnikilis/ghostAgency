@@ -12,21 +12,6 @@ const Header = ({
   backgroundColor = "#303056",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { pathname } = useLocation();
-
-  const onScrollHandler = (id) => {
-    document.getElementById(`${id}`).scrollIntoView();
-  };
-
-  useEffect(() => {
-    if (pathname === "/") {
-      onScrollHandler("first");
-    } else if (pathname === "/trackrecord") {
-      onScrollHandler("second");
-    } else if (pathname === "/support") {
-      onScrollHandler("third");
-    }
-  }, []);
 
   const toggleMenuHandler = () => {
     setIsOpen((prevState) => !prevState);
@@ -49,33 +34,20 @@ const Header = ({
   return (
     <header>
       <div className={styles.container}>
-        <NavLink to="/" onClick={() => onScrollHandler("first")}>
+        <NavLink to="/">
           <Logo color={logoColor} />
         </NavLink>
         <div
           className={cls.join(" ")}
           style={{ background: isOpen ? backgroundColor : "none" }}
         >
-          <NavLink
-            style={{ color }}
-            to="/"
-            onClick={() => onScrollHandler("first")}
-          >
+          <NavLink style={{ color }} to="/">
             Graveyard
           </NavLink>
-          <NavLink
-            style={{ color }}
-            to="/trackrecord"
-            onClick={() => onScrollHandler("second")}
-          >
+          <NavLink style={{ color }} to="/trackrecord">
             Track Record
           </NavLink>
-          <NavLink
-            style={btnStyles}
-            to="/support"
-            className={styles.btn}
-            onClick={() => onScrollHandler("third")}
-          >
+          <NavLink style={btnStyles} to="/support" className={styles.btn}>
             Support
           </NavLink>
         </div>
