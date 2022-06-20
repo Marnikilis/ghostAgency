@@ -62,13 +62,17 @@ const MainPage = () => {
       const currentPage = pages[index].id;
 
       let targetPage;
+
       if (nextPage && calcDownPosition < scrollPosition) {
         targetPage = nextPage;
-      } else if (viewHeight >= pageHeight) {
+      } else {
         targetPage = currentPage;
       }
+
       navigate(`/${targetPage === "first" ? "" : targetPage}`);
-      onScrollHandler(targetPage);
+      if (viewHeight >= pageHeight) {
+        onScrollHandler(targetPage);
+      }
     }
   }, [scrollPosition, scrollHeight]);
 
