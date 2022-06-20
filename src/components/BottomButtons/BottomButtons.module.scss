@@ -25,6 +25,6 @@
   padding: 20px 0;
 
   @include media-max($l-break) {
-    gap: 50px;
+    justify-content: space-between;
   }
 }

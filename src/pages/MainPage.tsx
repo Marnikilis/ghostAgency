@@ -25,7 +25,7 @@ const MainPage = () => {
     const viewHeight = window.innerHeight;
     const el = document.getElementById(`${id}`);
     if (el != null && el.scrollHeight <= viewHeight) {
-      el.scrollIntoView({ behavior: "smooth" });
+      el.scrollIntoView();
     }
     console.log(viewHeight, el.scrollHeight);
   };

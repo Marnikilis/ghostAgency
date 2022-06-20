@@ -22,7 +22,6 @@
     height: 400px;
   }
   @include media-max($xxs-break) {
-    background-position: -30px;
     width: 340px;
   }
 }

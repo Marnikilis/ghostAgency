@@ -12,9 +12,7 @@
   }
   @include media-max($xs-break) {
     justify-content: center;
-  }
-  @include media-max($l-break) {
-    margin-left: -50px;
+    margin-left: 0;
   }
 }
 .ghostName {
