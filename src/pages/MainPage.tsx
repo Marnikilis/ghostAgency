@@ -1,36 +1,31 @@
 import FirstPage from "./FirstPage/FirstPage";
 import SecondPage from "./SecondPage/SecondPage";
 import ThirdPage from "./ThirdPage/ThirdPage";
-import { useParams } from "react-router-dom";
-import { useEffect, useRef } from "react";
-import useDebounce from "../components/hooks/useDebounce";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 const MainPage = () => {
-  const pageId = useParams().id;
-  const scrollPosition = useRef<number>();
-  const debouncedScroll = useDebounce(scrollPosition.current, 500);
-
-  const scrollHeight = window.innerHeight;
+  const navigate = useNavigate();
+  const mainRef = useRef();
+  const scrollTimer = useRef<any>();
+  const [scrollPosition, setScrollPosition] = useState<number>();
+  const scrollHeight = document.body.scrollHeight;
 
   const handleScroll = () => {
-    scrollPosition.current = window.scrollY;
+    if (scrollTimer.current) {
+      clearTimeout(scrollTimer.current);
+    }
+    scrollTimer.current = setTimeout(() => {
+      setScrollPosition(window.scrollY);
+    }, 500);
   };
 
   const onScrollHandler = (id) => {
     const el = document.getElementById(`${id}`);
     if (el != null) {
-      el.scrollIntoView();
+      el.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  useEffect(() => {
-    console.log("scrollPos", scrollPosition.current);
-  }, [scrollPosition.current]);
-
-  useEffect(() => {
-    const page = pageId || "first";
-    onScrollHandler(page);
-  }, [pageId]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -40,23 +35,42 @@ const MainPage = () => {
   }, []);
 
   useEffect(() => {
-    // console.log("scroll", debouncedScroll);
+    if (mainRef.current) {
+      //@ts-ignore
+      const pages = mainRef.current.children;
+      const pageHeight = scrollHeight / pages.length;
 
-    if (debouncedScroll === 0) {
-      onScrollHandler("first");
-    } else if (scrollHeight > debouncedScroll) {
-      onScrollHandler("trackrecord");
-    } else if (debouncedScroll > scrollHeight * 1.5) {
-      onScrollHandler("support");
+      let index = 0;
+      for (let i = 0; i < pages.length; i++) {
+        const topLine = pageHeight * i;
+        const bottomLine = pageHeight * (i + 1);
+        if (topLine <= scrollPosition && scrollPosition < bottomLine) {
+          index = i;
+          break;
+        }
+      }
+
+      const calcDownPosition = index * pageHeight + pageHeight * 0.5;
+      const nextPage = pages[index]?.nextElementSibling?.id;
+      const currentPage = pages[index].id;
+
+      let targetPage;
+      if (nextPage && calcDownPosition < scrollPosition) {
+        targetPage = nextPage;
+      } else {
+        targetPage = currentPage;
+      }
+      navigate(`/${targetPage === "first" ? "" : targetPage}`);
+      onScrollHandler(targetPage);
     }
-  }, [debouncedScroll]);
+  }, [scrollPosition, scrollHeight]);
 
   return (
-    <>
+    <div ref={mainRef}>
       <FirstPage />
       <SecondPage />
       <ThirdPage />
-    </>
+    </div>
   );
 };
 

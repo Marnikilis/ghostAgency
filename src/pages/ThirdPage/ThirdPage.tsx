@@ -41,7 +41,6 @@ const ThirdPage = () => {
           />
         </Ghost>
         <BottomButtons
-          ghost={"first"}
           btnColor={color}
           scrollColor={color}
           textColor={pageColor}

@@ -25,7 +25,7 @@ const FirstPage = () => {
             }
           />
         </Ghost>
-        <BottomButtons ghost={"trackrecord"} link={"/trackrecord"} />
+        <BottomButtons link={"/trackrecord"} />
       </div>
     </div>
   );

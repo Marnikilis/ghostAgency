@@ -39,7 +39,7 @@ const SecondPage = () => {
             </div>
           </div>
         </Ghost>
-        <BottomButtons ghost={"support"} link={"/support"} />
+        <BottomButtons link={"/support"} />
       </div>
     </div>
   );

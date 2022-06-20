@@ -6,18 +6,11 @@ import Scroll from "../../UI/Scroll/Scroll";
 import { NavLink } from "react-router-dom";
 
 const BottomButtons = (props) => {
-  const onScrollHandler = (id) => {
-    document.getElementById(`${id}`).scrollIntoView();
-  };
   return (
     <div className={styles.bottomContainer}>
       <StrokeButton color={props.btnColor}>See All Ghost</StrokeButton>
       <div className={styles.scroll}>
-        <NavLink
-          onClick={() => onScrollHandler(props.ghost)}
-          to={props.link}
-          style={{ marginRight: "0" }}
-        >
+        <NavLink to={props.link} style={{ marginRight: "0" }}>
           <Scroll color={props.scrollColor} strokeColor={props.strokeColor} />
         </NavLink>
         <span style={{ color: props.textColor }}>
