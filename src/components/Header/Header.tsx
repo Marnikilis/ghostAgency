@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 //@ts-ignore
 import styles from "./Header.module.scss";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import Logo from "../../UI/Logo";
 import MenuToggle from "./MenuToggle/MenuToggle";
 import Backdrop from "./Backdrop/Backdrop";
@@ -12,6 +12,7 @@ const Header = ({
   backgroundColor = "#303056",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { id: pageId } = useParams();
 
   const toggleMenuHandler = () => {
     setIsOpen((prevState) => !prevState);
@@ -19,6 +20,10 @@ const Header = ({
   const menuCloseHandler = () => {
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    menuCloseHandler();
+  }, [pageId]);
 
   const cls = [styles.nav];
   if (!isOpen) {

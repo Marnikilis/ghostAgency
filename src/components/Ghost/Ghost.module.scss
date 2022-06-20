@@ -1,7 +1,7 @@
 @import "../../scss/settings";
 @import "../../scss/mixins";
 
-.flexContainer {
+.flexContainer, {
   display: flex;
   position: relative;
   padding-right: 40px;
@@ -10,6 +10,7 @@
     flex-direction: column;
   }
   @include media-max($xs-break) {
+    padding-right: 0;
     margin-bottom: 50px;
     align-items: center;
   }

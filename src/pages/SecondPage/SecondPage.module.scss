@@ -6,12 +6,13 @@
 }
 
 .imgContainer {
+  align-self: center;
   width: 90%;
   height: 500px;
-  background: url("../../images/adino.svg") no-repeat;
+  background: url("../../images/adino.svg") 70px no-repeat;
   background-size: contain;
 
-  @include media-max($md-break) {
+  @include media-max($lg-break) {
     background-position: center right;
   }
   @include media-max($sm-break) {
@@ -23,8 +24,8 @@
     height: 350px;
   }
   @include media-max($xxs-break) {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 270px;
   }
 }
 

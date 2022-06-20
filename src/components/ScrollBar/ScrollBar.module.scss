@@ -12,8 +12,9 @@
   @include media-max($md-break) {
     top: 70%;
   }
-  @include media-max($xs-break) {
-    top: 62%;
+  @include media-max($l-break) {
+    top: 63%;
+    right: 0;
   }
 }
 

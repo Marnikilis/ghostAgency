@@ -22,12 +22,10 @@ const MainPage = () => {
   };
 
   const onScrollHandler = (id) => {
-    const viewHeight = window.innerHeight;
     const el = document.getElementById(`${id}`);
-    if (el != null && el.scrollHeight <= viewHeight) {
+    if (el != null) {
       el.scrollIntoView();
     }
-    console.log(viewHeight, el.scrollHeight);
   };
 
   useEffect(() => {
@@ -47,6 +45,7 @@ const MainPage = () => {
       //@ts-ignore
       const pages = mainRef.current.children;
       const pageHeight = scrollHeight / pages.length;
+      const viewHeight = window.innerHeight;
 
       let index = 0;
       for (let i = 0; i < pages.length; i++) {
@@ -65,7 +64,7 @@ const MainPage = () => {
       let targetPage;
       if (nextPage && calcDownPosition < scrollPosition) {
         targetPage = nextPage;
-      } else {
+      } else if (viewHeight >= pageHeight) {
         targetPage = currentPage;
       }
       navigate(`/${targetPage === "first" ? "" : targetPage}`);

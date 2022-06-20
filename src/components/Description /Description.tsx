@@ -14,7 +14,7 @@ const Description = (props) => {
         {props.heading}
       </div>
       <div className={styles.title}>{props.title}</div>
-      <div> {props.text}</div>
+      <div className={styles.text}>{props.text}</div>
       <div className={styles.buttons}>
         <Button textColor={props.textColor} color={props.btnColor}>
           Book Now
