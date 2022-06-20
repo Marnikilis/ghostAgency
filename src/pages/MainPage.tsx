@@ -1,13 +1,14 @@
 import FirstPage from "./FirstPage/FirstPage";
 import SecondPage from "./SecondPage/SecondPage";
 import ThirdPage from "./ThirdPage/ThirdPage";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
 const MainPage = () => {
   const navigate = useNavigate();
   const mainRef = useRef();
   const scrollTimer = useRef<any>();
+  const { id: pageId } = useParams();
   const [scrollPosition, setScrollPosition] = useState<number>();
   const scrollHeight = document.body.scrollHeight;
 
@@ -21,11 +22,18 @@ const MainPage = () => {
   };
 
   const onScrollHandler = (id) => {
+    const viewHeight = window.innerHeight;
     const el = document.getElementById(`${id}`);
-    if (el != null) {
+    if (el != null && el.scrollHeight <= viewHeight) {
       el.scrollIntoView({ behavior: "smooth" });
     }
+    console.log(viewHeight, el.scrollHeight);
   };
+
+  useEffect(() => {
+    const page = pageId || "first";
+    onScrollHandler(page);
+  }, [pageId]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
