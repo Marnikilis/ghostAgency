@@ -3,12 +3,21 @@ import React from "react";
 import styles from "./ScrollBar.module.scss";
 import { NavLink } from "react-router-dom";
 
-const ScrollBar = () => {
+const ScrollBar = ({ activeLinkIndex }) => {
+  const urlArray = ["", "trackrecord", "support"];
   return (
     <div className={styles.container}>
-      <NavLink className={styles.link} to="/" />
-      <NavLink className={styles.link} to="/trackrecord" />
-      <NavLink className={styles.link} to="/support" />
+      {urlArray.map((url, i) => {
+        return (
+          <NavLink
+            key={i}
+            to={`/${url}`}
+            className={`${styles.link} ${
+              activeLinkIndex === i ? styles.activeLink : null
+            }`}
+          />
+        );
+      })}
     </div>
   );
 };

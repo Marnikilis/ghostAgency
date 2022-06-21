@@ -6,6 +6,7 @@ import Description from "../../components/Description /Description";
 import BottomButtons from "../../components/BottomButtons/BottomButtons";
 import Caption from "../../components/Caption/Caption";
 import Ghost from "../../components/Ghost/Ghost";
+import ScrollBar from "../../components/ScrollBar/ScrollBar";
 
 const pageColor = "#F8F8FD";
 const color = "#A7DE93";
@@ -39,6 +40,7 @@ const ThirdPage = () => {
               "bike with parts only madefrom Malaysia."
             }
           />
+          <ScrollBar activeLinkIndex={2} />
         </Ghost>
         <BottomButtons
           btnColor={color}

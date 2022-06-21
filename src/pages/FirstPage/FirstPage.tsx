@@ -6,6 +6,7 @@ import Description from "../../components/Description /Description";
 import BottomButtons from "../../components/BottomButtons/BottomButtons";
 import Caption from "../../components/Caption/Caption";
 import Ghost from "../../components/Ghost/Ghost";
+import ScrollBar from "../../components/ScrollBar/ScrollBar";
 
 const FirstPage = () => {
   return (
@@ -24,6 +25,7 @@ const FirstPage = () => {
               " With his hogwarts certified power he promise to be a hero for all of ghostkind."
             }
           />
+          <ScrollBar activeLinkIndex={0} />
         </Ghost>
         <BottomButtons link={"/trackrecord"} />
       </div>

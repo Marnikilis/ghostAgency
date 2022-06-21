@@ -1,7 +1,6 @@
 import React from "react";
 //@ts-ignore
 import styles from "./Ghost.module.scss";
-import ScrollBar from "../ScrollBar/ScrollBar";
 
 const cls = [styles.flexContainer];
 
@@ -18,7 +17,6 @@ const Ghost = (props) => {
       className={cls.join(" ")}
     >
       {props.children}
-      <ScrollBar />
     </div>
   );
 };

@@ -6,6 +6,7 @@ import Description from "../../components/Description /Description";
 import BottomButtons from "../../components/BottomButtons/BottomButtons";
 import Caption from "../../components/Caption/Caption";
 import Ghost from "../../components/Ghost/Ghost";
+import ScrollBar from "../../components/ScrollBar/ScrollBar";
 
 const pageColor = "#303056";
 const color = "#F8D3EB";
@@ -38,6 +39,7 @@ const SecondPage = () => {
               />
             </div>
           </div>
+          <ScrollBar activeLinkIndex={1} />
         </Ghost>
         <BottomButtons link={"/support"} />
       </div>

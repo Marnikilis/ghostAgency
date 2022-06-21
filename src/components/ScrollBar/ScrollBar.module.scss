@@ -1,7 +1,7 @@
 @import "../../scss/settings";
 @import "../../scss/mixins";
 
-.container{
+.container {
   position: absolute;
   width: 14px;
   top: 35%;
@@ -19,14 +19,12 @@
 }
 
 
-.link,
-.link:link,
-.link:visited {
+.link{
   position: relative;
   padding: 5px;
   margin-bottom: 18px;
 
-  &:before{
+  &:before {
     content: '';
     top: 50%;
     left: 50%;
@@ -38,11 +36,10 @@
     background-color: #F8D3EB;
     transition: all 0.5s;
   }
-  &:global {
-    &.active {
-      &:before{
-        height: 20px;
-      }
+
+  &.activeLink {
+    &:before {
+      height: 20px;
     }
   }
 }
